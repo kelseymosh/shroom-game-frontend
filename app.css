@@ -1,0 +1,31 @@
+#container {
+    background-color: transparent;
+    display: flex;
+    height: 75vh;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px;
+    height: 100px;
+    width: 75px;
+}
+
+.card {
+    height: 100px;
+    width: 75px;
+    align-items:  center;
+    margin: auto;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+
+.front > img, .back > img {
+    height: 100px;
+    width: 75px;
+}
+
+.front > img:hover {
+    opacity: 0.5;
+}

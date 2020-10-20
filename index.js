@@ -8,7 +8,7 @@ fetch('http://localhost:3000/mushroomsrandom')
     .then(mushrooms => {
         mushrooms.forEach (mushroom =>{ 
             const flipCard1 = document.getElementById('flip-card-1').setAttribute("src", `${mushroom.img_url}`)
-            // const flipCard2 = document.getElementById('flip-card-2').setAttribute("src", `${mushroom.img_url}`)
+            const flipCard2 = document.getElementById('flip-card-2').setAttribute("src", `${mushroom.img_url}`)
             // const flipCard3 = document.getElementById('flip-card-3').setAttribute("src", `${mushroom.img_url}`)
             
     })

@@ -1,7 +1,6 @@
 console.log('test')
 
-const mainGamePage = document.getElementById("main-game-page")
-const cardContent = document.querySelector('.card');
+const cardContent = document.querySelector('.flip-card');
 
 fetch('http://localhost:3000/mushroomsrandom')
     .then(response => response.json())

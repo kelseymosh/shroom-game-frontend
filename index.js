@@ -1,19 +1,23 @@
 console.log('test')
 
+
 // const mainGamePage = document.getElementById("main-game-page")
 const cardContent = document.querySelector('.flip-card')
+
 
 fetch('http://localhost:3000/mushroomsrandom')
     .then(response => response.json())
     .then(mushrooms => {
         mushrooms.forEach (mushroom =>{ 
+
            const imgCard = document.createElement('img')
            imgCard.src = `${mushroom.img_url}`
-        //    imgCard.innerHTMl = `<img src="${mushroom.img_url}">`
+      
            cardContent.append(imgCard)
            
            
         })
+
     })
     
 

@@ -3,17 +3,21 @@ console.log('test')
 
 const cardContent = document.querySelector('.card')
 
+
+
 fetch('http://localhost:3000/mushroomsrandom')
     .then(response => response.json())
     .then(mushrooms => {
         mushrooms.forEach (mushroom =>{ 
+
            const imgCard = document.createElement('img')
            imgCard.src = `${mushroom.img_url}`
-        
+
            cardContent.append(imgCard)
            
            
         })
+
     })
     
 

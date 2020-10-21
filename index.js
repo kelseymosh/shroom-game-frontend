@@ -1,18 +1,20 @@
 console.log('test')
 
-const mainGamePage = document.getElementById("main-game-page")
-const cardContent = document.querySelector('.card');
+// const mainGamePage = document.getElementById("main-game-page")
+const cardContent = document.querySelector('.flip-card')
 
 fetch('http://localhost:3000/mushroomsrandom')
     .then(response => response.json())
     .then(mushrooms => {
         mushrooms.forEach (mushroom =>{ 
-            const flipCard1 = document.getElementById('flip-card-1').setAttribute("src", `${mushroom.img_url}`)
-            // const flipCard2 = document.getElementById('flip-card-2').setAttribute("src", `${mushroom.img_url}`)
-            // const flipCard3 = document.getElementById('flip-card-3').setAttribute("src", `${mushroom.img_url}`)
-            
+           const imgCard = document.createElement('img')
+           imgCard.src = `${mushroom.img_url}`
+        //    imgCard.innerHTMl = `<img src="${mushroom.img_url}">`
+           cardContent.append(imgCard)
+           
+           
+        })
     })
-})
     
 
 
@@ -43,5 +45,5 @@ fetch('http://localhost:3000/mushroomsrandom')
                 backCard1.append(deliciousName)
             }
 
-        shroomResults()
+        
         }

@@ -1,21 +1,45 @@
 console.log('test')
 
-
-const cardContent = document.querySelector('.card')
-
-
+// <div class="card">
+// <div class="card-inner">
+//     <div id="card-front1" class="card-front">
+    
+//     </div>
+//     <div class="card-back">
+        
+//     </div>
+// </div>
+// </div>
 
 fetch('http://localhost:3000/mushroomsrandom')
     .then(response => response.json())
     .then(mushrooms => {
         mushrooms.forEach (mushroom =>{ 
+            const mushroomCard = document.createElement('div')
+            mushroomCard.className = "card"
 
-           const imgCard = document.createElement('img')
-           imgCard.src = `${mushroom.img_url}`
+            const mushroomCardInner = document.createElement('div')
+            mushroomCardInner.className = "card-inner"
 
-           cardContent.append(imgCard)
-           
-           
+            const mushroomCardFront = document.createElement('div') 
+            mushroomCardFront.className = "card-front"
+            
+            const mushroomCardBack = document.createElement('div')
+            mushroomCardBack.className = "card-back"
+            
+            const imgCard = document.createElement('img')
+            imgCard.src = `${mushroom.img_url}`
+
+            mushroomCardFront.append(imgCard)
+
+            mushroomCardInner.append(mushroomCardFront, mushroomCardBack)
+
+            mushroomCard.append(mushroomCardInner)
+    
+            const mushroomsContainer = document.getElementById('container')
+            mushroomsContainer.append(mushroomCard)
+
+
         })
 
     })

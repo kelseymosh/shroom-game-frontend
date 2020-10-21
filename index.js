@@ -1,8 +1,8 @@
 console.log('test')
 
 
-// const mainGamePage = document.getElementById("main-game-page")
-const cardContent = document.querySelector('.flip-card')
+const cardContent = document.querySelector('.card')
+
 
 
 fetch('http://localhost:3000/mushroomsrandom')
@@ -12,7 +12,7 @@ fetch('http://localhost:3000/mushroomsrandom')
 
            const imgCard = document.createElement('img')
            imgCard.src = `${mushroom.img_url}`
-      
+
            cardContent.append(imgCard)
            
            

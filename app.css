@@ -77,11 +77,21 @@ body{
 }
 
 #instructions {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'IM Fell French Canon SC', serif;
+    font-family: 'Lato', sans-serif;
     background-color: silver;
     display: flex;
     justify-content: center;
-    border: 5px solid slategray;
+    border: 2px solid slategray;
+    margin-left: 250px;
+    margin-right: 250px;
 
+    -webkit-box-shadow: 3px 3px 5px 6px slategrey;
+    -moz-box-shadow: 3px 3px 5px 6px slategray;
+    box-shadow: 3px 3px 5px 6px slategray;
+    
 }
 
 #game-title {
@@ -111,11 +121,7 @@ iframe.relative {
         background-position-y: 50%;
     }
     
-#instructions {
-    font-size: 20px;
-    font-family: 'IM Fell French Canon SC', serif;
-    font-family: 'Lato', sans-serif;
-}
+
 
 .scientific {
     font-size: 35px;

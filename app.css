@@ -1,18 +1,22 @@
+#container {
+    display: flex;
+}
+
 .card {
     background-color: transparent;
     display: flex;
+    justify-content: center;
     height: 75vh;
-    justify-content: flex-start;
     align-items: center;
-    margin: 15px;
-    height: 500px;
-    width: 500px;
+    margin: 50px;
+    height: 300px;
+    width: 300px;
 }
 
 img {
     background-color: #3d2303;
     display: flex;
-    width: 30%;
+    width: 100%;
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: center;
@@ -46,8 +50,13 @@ img {
 
 .card-back {
     background-color: burlywood;
+    text-align: center;
     transform: rotateY(180deg);
 }
 
+.back-name {
+    text-align: center;
+    
+}
 
 

@@ -61,7 +61,13 @@ fetch('http://localhost:3000/mushroomsrandom')
                 mushroomCardBack.append(deliciousName)
                 }
             })
+        
         })
+        function refreshPage(){
+            window.location.reload();
+        } 
+
+        
 
         // const mushroomInstructions = document.createElement('header')
         // mushroomInstructions.innerHTML = <p>"You’ve been stranded in a magical forest and have come across 3 mushrooms, <br>consider yourself warned -Blast off, fuck that’s delicious, or die?"</br></p>
